@@ -1,0 +1,63 @@
+
+
+header {
+   font-family: 'Ubuntu', sans-serif;
+    display: flex; /* Koristi fleksibilan raspored za element .flowr */
+    align-items: center; /* Poravnava sadržaj vertikalno u sredinu */
+    justify-content: space-between;
+   /* background-color: #f0f0f0;  Postavlja boju pozadine na svetlo sivu */
+    background-color:white;
+    padding: 15px; /* Dodaje unutrašnji prostor od 20 piksela */
+  }
+  
+  .flowr-title {
+    font-size: 30px; /* Postavlja veličinu fonta na 30 piksela */
+    margin: 0; /* Uklanja unapred postavljene margine */
+    margin-right: 440px; 
+    color: coral;
+    font-weight: bold;
+    /*color: rgb(125, 34, 93);*/
+  }
+  
+  .flower-image {
+    width: 50px; /* Postavlja širinu slike na 50 piksela */
+    height: auto; /* Automatski prilagođava visinu slike */
+    margin-right: 10px;
+    border: 0; /* Uklanja okvir oko slike */
+    outline: none; /* Uklanja spoljašnji okvir oko slike */
+  }
+  
+  
+  .sl-banner-navigation {
+    float: right; /* Pozicionira navigaciju uz desnu ivicu */
+   
+    padding: 0; /* Uklanja unapred postavljene padding */
+    margin: 0; /* Uklanja unapred postavljene margine */
+  }
+  
+  .sl-banner-navigation li {
+   
+    display: inline-block; /* Postavlja elemente da idu vodoravno */
+    margin-left: 60px; /* Dodaje unutrašnji prostor sa leve strane svakom elementu */
+  }
+  .sl-banner-navigation a {
+    font-size: 20px; /* Postavlja veličinu fonta na 20 piksela */
+    text-decoration: none; /* Uklanja podvlačenje ispod teksta linkova */
+    color: lightslategray; /* Postavlja boju teksta na svetlo sivu */
+  }
+  
+  /* Stilizacija linka za prijavljivanje */
+  .login a {
+    color:coral;
+  }
+  .nav-bar li:last-child {
+   
+    border: 10px solid rgb(241, 131, 92); /* Postavljanje okvira  */
+    background-color: rgb(241, 131, 92);
+    border-radius: 100px;
+    a{
+      color: white;
+    }
+    
+   
+}

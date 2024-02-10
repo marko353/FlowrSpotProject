@@ -8,12 +8,9 @@
   }
   
   .body-img {
-    margin-top: 30px;
+    margin: 20px;
     position: relative; /* Dodajemo relativni položaj kako bi apsolutni elementi unutar njega bili pozicionirani u odnosu na ovaj kontejner */
-    margin-top: 2px; // Smanjuje razmak na vrhu komponente
-    margin-bottom: 2px; // Smanjuje razmak na dnu komponente
-    padding: 2px;
-  }
+   }
   
   .body-img img {
     width: 100%;
@@ -22,12 +19,8 @@
     filter: brightness(60%);
   }
   
-  body {
-    background-color: #f0f0f0;
-    padding: 20px;
-  }
   
-  #title {
+  h1 {
     position: absolute;
     height: 150px; /* Promenjena visina na 150px */
     width: calc(100% - 40px); /* Koristimo calc funkciju kako bismo oduzeli padding sa leve i desne strane (20px + 20px = 40px) */

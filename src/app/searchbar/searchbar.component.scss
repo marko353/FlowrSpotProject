@@ -1,0 +1,100 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .body-img {
+    margin-top: 30px;
+    position: relative; /* Dodajemo relativni položaj kako bi apsolutni elementi unutar njega bili pozicionirani u odnosu na ovaj kontejner */
+    margin-top: 2px; // Smanjuje razmak na vrhu komponente
+    margin-bottom: 2px; // Smanjuje razmak na dnu komponente
+    padding: 2px;
+  }
+  
+  .body-img img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    filter: brightness(60%);
+  }
+  
+  body {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  #title {
+    position: absolute;
+    height: 150px; /* Promenjena visina na 150px */
+    width: calc(100% - 40px); /* Koristimo calc funkciju kako bismo oduzeli padding sa leve i desne strane (20px + 20px = 40px) */
+    top: 45%; /* Pomerili smo na 50% kako bi bio vertikalno centriran */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 60px;
+    color: #f0f0f0;
+  }
+  
+  .body-img p {
+    text-align: center;
+    position: absolute;
+    top: 48%; /* Promenjen top na 60% */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #f0f0f0;
+  }
+  
+  .search-bar {
+    background: #f0f0f0;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+  
+  .search-bar input[type="search"] {
+    height: 85px;
+    width: 720px;
+    font-size: 30px;
+    padding-right: 70px;
+    padding-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+    border: none;
+    appearance: none;
+  }
+  
+  .search-bar input[type="search"]::placeholder {
+    color: grey;
+  }
+  
+  .fas.fa-search {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: rgba(241, 131, 92, 0.5);
+    cursor: pointer;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    color: #f0f0f0;
+  }
+  

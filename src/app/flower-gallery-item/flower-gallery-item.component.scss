@@ -1,0 +1,78 @@
+.flower-gallery-item {
+  --highlight-color: #ecb9b0;
+
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  padding: 20px;
+  margin-bottom: 24px;
+  position: relative;
+  border-radius: 5px;
+  font-family: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  background-blend-mode: multiply;
+
+  @mixin highlight-state {
+    color: white;
+    background-color: var(--highlight-color);
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.7;
+  }
+
+  .favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    label {
+      color: lightgray;
+      background-color: white;
+      border-radius: 50%;
+      padding: 5px 8px;
+      cursor: pointer;
+      transition: all 400ms;
+
+      &:hover {
+        @include highlight-state();
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+
+      &:checked + label {
+        @include highlight-state();
+      }
+    }
+  }
+
+  .sightings {
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 12px;
+    color: white;
+    transition: all 400ms;
+    background: rgba($color: #000000, $alpha: 0.5);
+    min-width: 70px;
+    &:hover {
+      cursor: pointer;
+      @include highlight-state()
+    }
+  }
+}

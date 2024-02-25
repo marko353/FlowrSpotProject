@@ -1,18 +1,9 @@
+.flower-gallery {
+  padding: 8px;
+}
 
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 20px;
-  }
-  
-  .image-row {
-    display: flex;
-    margin-left: -12px; /* Pomeranje leve strane za 5 piksela ulevo */
-  }
-  
-  .image-row > :not(:last-child) {
-    margin-right: 4px; /* Dodavanje 4 piksela razmaka između slika */
-  }
-  
-  
- 
+.container-fluid {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}

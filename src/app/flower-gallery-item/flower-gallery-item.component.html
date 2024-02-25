@@ -1,0 +1,11 @@
+<article *ngIf="flower"
+  class="flower-gallery-item" 
+  [ngStyle]="{'background-image':' url(' + flower.profile_picture + ')'}">
+  <div class="favorite">
+    <input type="checkbox" name="favorite" id="favorite" [ngModel]="flower.favorite">
+    <label for="favorite"><i class="fas fa-star"></i></label>
+  </div>
+  <h4>{{ flower.name }}</h4>
+  <p>{{ flower.latin_name }}</p>
+  <span class="sightings">{{ flower.sightings }} sightings</span>
+</article>

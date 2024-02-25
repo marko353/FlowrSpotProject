@@ -1,1 +1,7 @@
-<app-flower-list></app-flower-list>
+<div class="container-fluid">
+  <div class="flower-gallery row">
+    <div class="col-6 col-md-4 col-lg-3" *ngFor="let item of flowers$ | async">
+      <app-flower-gallery-item [flower]="item"></app-flower-gallery-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+/* Stilovi za formu */
+app-create-account-form {
+    display: none; /* Početno sakrivanje forme */
+  }
+  
+  /* Stilovi za formu kada je showForm postavljeno na true */
+  app-create-account-form.show {
+    display: block; /* Prikazivanje forme kada je showForm true */
+    max-width: 400px; /* Postavljanje maksimalne širine forme */
+    margin: 0 auto; /* Centralno poravnanje forme */
+    padding: 20px; /* Dodavanje unutrašnjeg razmaka oko forme */
+    background-color: #f9f9f9; /* Boja pozadine forme */
+    border-radius: 8px; /* Zaobljeni ivici forme */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sjenčanje forme */
+  }
+  
+  /* Stilovi za input polja u formi */
+  app-create-account-form.show input {
+    width: 100%; /* Puna širina input polja */
+    margin-bottom: 10px; /* Dodavanje razmaka ispod svakog input polja */
+    padding: 10px; /* Dodavanje unutrašnjeg razmaka input poljima */
+    border: 1px solid #ccc; /* Stil ivice input polja */
+    border-radius: 4px; /* Zaobljeni ivici input polja */
+    box-sizing: border-box; /* Postavljanje box-sizing na border-box */
+  }
+  
+  /* Stilovi za button u formi */
+  app-create-account-form.show button {
+    width: 100%; /* Puna širina button-a */
+    padding: 10px; /* Dodavanje unutrašnjeg razmaka button-u */
+    background-color: #007bff; /* Boja pozadine button-a */
+    color: #fff; /* Boja teksta button-a */
+    border: none; /* Uklanjanje ivice button-a */
+    border-radius: 4px; /* Zaobljeni ivici button-a */
+    cursor: pointer; /* Postavljanje kursora na pointer */
+    transition: background-color 0.3s ease; /* Tranzicija za promenu boje pozadine */
+  }
+  
+  /* Stilovi za button na hover u formi */
+  app-create-account-form.show button:hover {
+    background-color: #0056b3; /* Promena boje pozadine button-a na hover */
+  }
+  

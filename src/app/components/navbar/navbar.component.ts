@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { AccountFormService } from '../../account-form.service';
 
 @Component({
   standalone: true,
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  @Output() showFormEvent = new EventEmitter<boolean>();
 
+
+  constructor(private accountFormService : AccountFormService ) { }
+  showCreateAccountForm() {
+    console.log("Clicked on New Account button");
+    this.accountFormService.setShowCreateAccount(true);
+  }
 }

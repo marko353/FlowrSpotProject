@@ -1,15 +1,24 @@
 import { Component } from '@angular/core';
+
 import { FlowerGalleryItemComponent } from '../flower-gallery-item/flower-gallery-item.component';
-
-
+import { FlowerService } from '../flower.service';
+import { Observable } from 'rxjs';
+import { Flower } from '../flower';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-flowergallery',
   standalone: true,
-  imports: [FlowerGalleryItemComponent],
+  imports: [FlowerGalleryItemComponent, CommonModule],
   templateUrl: './flowergallery.component.html',
   styleUrl: './flowergallery.component.scss'
 })
 export class FlowergalleryComponent {
+
+  public flowers$: Observable<Flower[]> = this._flowerService.getFlowers();
+
+  constructor(
+    private _flowerService: FlowerService
+  ) { }
 
 }

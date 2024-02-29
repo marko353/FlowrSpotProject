@@ -1,11 +1,11 @@
 /* Container za formu */
 .form-container {
-  max-width: 500px; /* Možete prilagoditi veličinu prema svojim preferencijama */
-  margin: 0 auto; /* Centrira formu na sredini ekrana */
-  padding: 20px; /* Dodaje malo prostora oko forme */
+  max-width: 400px; /* Prilagodite veličinu prema svojim preferencijama */
+  margin: 50px auto 0; /* Centriramo formu na sredini ekrana i dodajemo marginu od 50px na vrhu */
+  padding: 20px; /* Dodajemo malo prostora oko forme */
   background-color: #f9f9f9; /* Boja pozadine */
-  border: 1px solid #ccc; /* Dodaje tanku ivicu oko forme */
-  border-radius: 8px; /* Zaobljeni uglovi */
+  border: 1px solid #ccc; /* Dodajemo tanku ivicu oko forme */
+  border-radius: 8px;
   margin-top: 50px;
 }
 

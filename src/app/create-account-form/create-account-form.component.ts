@@ -10,25 +10,31 @@ import { CommonModule } from '@angular/common';
   styleUrl: './create-account-form.component.scss'
 })
 export class CreateAccountFormComponent implements OnInit {
-  username: string = '';
-  password: string = ''; // Definišemo model za password polje
-  showForm: boolean = false;
 
-  ngOnInit() {
-    this.showCreateAccountForm(); // Prikazivanje forme pri inicijalizaciji komponente
-  }
+formData = {
 
-  showCreateAccountForm() {
-    this.showForm = true;
-  }
+  username: '',
+  email: '',
+  password: ''
 
-  createAccount() {
-    console.log('Kreiranje naloga za korisnika:', this.username);
-    console.log('Šifra:', this.password);
-    // Resetovanje vrednosti polja nakon kreiranja naloga
-    this.username = '';
-    this.password = '';
+};
+onSubmit(){
+  console.log('Novi nalog', this.formData)
+}
+
+
+
+  ngOnInit(): void {
+  
   }
+ 
+
+
+  
+
+
+
+
 }
 
 

@@ -1,0 +1,51 @@
+/* Stilizacija kontejnera za formu */
+.form-container {
+    max-width: 400px; /* Možete prilagoditi veličinu prema svojim preferencijama */
+    margin: 0 auto; /* Centrira formu na sredini ekrana */
+    padding: 20px; /* Dodaje malo prostora oko forme */
+    background-color: #f9f9f9; /* Boja pozadine */
+    border: 1px solid #ccc; /* Dodaje tanku ivicu oko forme */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    margin-top: 50px;
+  }
+  
+  /* Stilizacija grupa unosa */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Stilizacija labela */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Stilizacija input polja */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  /* Stilizacija dugmeta */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: coral; /* Zelena boja */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+  button[type="submit"]:hover {
+    background-color: coral; 
+  }
+  

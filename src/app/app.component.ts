@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FlowergalleryComponent } from './flowergallery/flowergallery.component';
+import { CommonModule } from '@angular/common';
+import { CreateAccountFormComponent } from './create-account-form/create-account-form.component';
+import { RouterModule } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent,SearchbarComponent,FlowergalleryComponent],
+  imports: [NavbarComponent,SearchbarComponent,FlowergalleryComponent, CommonModule,CreateAccountFormComponent, RouterModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  showForm: boolean = true;
+  
+  constructor() {}
+
 
 }

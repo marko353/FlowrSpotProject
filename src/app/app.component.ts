@@ -9,10 +9,12 @@ import { RouterModule } from '@angular/router';
 
 
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent,SearchbarComponent,FlowergalleryComponent, CommonModule,CreateAccountFormComponent, RouterModule ],
+  imports: [NavbarComponent,SearchbarComponent,FlowergalleryComponent, CommonModule,CreateAccountFormComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

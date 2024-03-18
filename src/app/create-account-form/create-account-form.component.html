@@ -1,20 +1,75 @@
-<div class="form-container">
-    <form (ngSubmit)="onSubmit()">
+<div class="form-container" *ngIf="registrationForm">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-            <label for="username">User name</label>
-            <input type="text" id="username" name="username" [(ngModel)]="formData.username" required>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" formControlName="firstName">
+            <div *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.touched || registrationForm.get('lastName')?.dirty)" class="error-message">
+                <span *ngIf="registrationForm.get('firstName')?.hasError('required')">First Name is required</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" formControlName="lastName">
+            <div *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.touched || registrationForm.get('lastName')?.dirty)" class="error-message">
+                <span *ngIf="registrationForm.get('lastName')?.hasError('required')">Last Name is required</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <input type="text" id="username" formControlName="username">
+            <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched" class="error-message">
+                <span *ngIf="registrationForm.get('username')?.hasError('required')">Username is required</span>
+                <span *ngIf="registrationForm.get('email')?.hasError('email')">Username is not valid</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+            <input type="email" id="email" formControlName="email">
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="error-message">
+                <span *ngIf="registrationForm.get('email')?.hasError('required')">Email Address is required</span>
+                <span *ngIf="registrationForm.get('email')?.hasError('email')">Email Address is not valid</span>
+            </div>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" [(ngModel)]="formData.password" required>
+            <input type="password" id="password" formControlName="password">
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="error-message">
+                <span *ngIf="registrationForm.get('password')?.hasError('required')">Password is required</span>
+                <span *ngIf="registrationForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long</span>
+            </div>
         </div>
-        <button type="submit">Create Account</button>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" formControlName="country">
+                <option value="" disabled selected>Select your country</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">UK</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div>
+                <label><input type="radio" formControlName="gender" value="male"> Male</label>
+                <label><input type="radio" formControlName="gender" value="female"> Female</label>
+                <label><input type="radio" formControlName="gender" value="other"> Other</label>
+            </div>
+            <div *ngIf="registrationForm.get('gender')?.invalid && registrationForm.get('gender')?.touched" class="error-message">
+                <span *ngIf="registrationForm.get('gender')?.hasError('required')">Please select your gender</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="agree">I agree to terms and conditions</label>
+            <input type="checkbox" id="agree" formControlName="agree">
+            <div *ngIf="registrationForm.get('agree')?.invalid && registrationForm.get('agree')?.touched" class="error-message">
+                <span *ngIf="registrationForm.get('agree')?.hasError('required')">You must agree to terms and conditions</span>
+            </div>
+        </div>
+        <button type="submit" [disabled]="registrationForm.invalid">Create Account</button>
     </form>
 </div>
+
+
 
 
 

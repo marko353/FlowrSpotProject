@@ -1,16 +1,30 @@
 <header>
   <div class="header-content">
-    <img id="img" src="assets/images/flowerr.png" alt="flow" class="flower-image">
-    <p class="flowr-title">FlowrSpot</p>
+    <a routerLink="/">
+        <img id="img" src="assets/images/flowerr.png" alt="flow" class="flower-image">
+    </a>
+    <a class="flowr-title" routerLink="/">FlowrSpot</a>
   </div>
+
   <nav class="sl-banner-navigation" role="navigation" aria-label="Site navigation">
     <ul class="nav-bar">
       <li><a href="flowers">Flowers</a></li>
       <li><a href="latestSightings">Latest Sightings</a></li>
       <li><a href="favorites">Favorites</a></li>
-      <li><a routerLink="/login">Login</a></li>
-      <li><a routerLink="/register" >New Account</a></li>
+
+      @if(isAuthenticated) {
+        <li class="avatar">
+          <span class="user-name">{{authService._user?.firstName}} {{authService._user?.lastName}}</span>
+          <img  [src]="authService._user?.profilePictureUrl" (click)="handleImageClick()" />
+        </li>
+      } @else {
+        <li class="button-styling"><a routerLink="/login">Login</a></li>
+        <li class="button-styling"><a routerLink="/register">New Account</a></li>
+      }
+      
+      
     </ul>
   </nav>
 </header>
+
 

@@ -4,6 +4,37 @@
 
 .container-fluid {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto; /* Izmene */
 }
+
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px auto; /* Izmene */
+  text-align: center; /* Dodato za centriranje */
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 0 5px; /* Dodato za razmak između brojeva */
+}
+
+.pagination li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #f0f0f0; /* Boja pozadine */
+  border: 1px solid #ccc; /* Okvir */
+  border-radius: 3px; /* Zaobljeni ivičnjaci */
+  color: #333; /* Boja teksta */
+}
+
+.pagination li a:hover,
+.pagination li a.active { /* Dodato */
+  background-color: coral;
+}
+
+.pagination li a.active:hover { /* Dodato */
+  background-color: coral;
+}
+
+

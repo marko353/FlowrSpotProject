@@ -6,7 +6,7 @@ export const FLOWERS: Flower[] = [
     name: "Alpski volcin",
     latin_name: "Daphne alpina",
     sightings: 51,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/007/medium/L_00010.jpg?1527514226",
+    profile_picture:"assets/images/flowers-high-resolution.jpg",
     favorite: false
   },
   {
@@ -14,7 +14,7 @@ export const FLOWERS: Flower[] = [
     name: "Balloon Flower",
     latin_name: "Platycodon grandiflorus",
     sightings: 12,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/038/medium/pl-image.png?1656446346",
+    profile_picture: "assets/images/flower5.jpg",
     favorite: false
   },
   {
@@ -22,7 +22,7 @@ export const FLOWERS: Flower[] = [
     name: "bb",
     latin_name: "bb",
     sightings: 12,
-    profile_picture: "https://flowrspot-api.herokuapp.com/images/medium/missing.jpg",
+    profile_picture: "assets/images/pex.webp",
     favorite: true
   },
   {
@@ -30,7 +30,7 @@ export const FLOWERS: Flower[] = [
     name: "Bee orchid",
     latin_name: "Ophrys apifera",
     sightings: 17,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/014/medium/L_00010.jpg?1527514642",
+    profile_picture: "assets/images/pexels-photo-1169084.jpeg",
     favorite: false
   },
   {
@@ -38,7 +38,7 @@ export const FLOWERS: Flower[] = [
     name: "Begonija",
     latin_name: "begonija",
     sightings: 10,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/067/medium/begonija.jpg?1680705963",
+    profile_picture: "assets/images/pexels-photojpeg.jpeg",
     favorite: true
   },
   {
@@ -46,7 +46,7 @@ export const FLOWERS: Flower[] = [
     name: "Checkered Lily",
     latin_name: "Fritillaria meleagris",
     sightings: 6,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/008/medium/L_9_0972.JPG?1527514310",
+    profile_picture: "assets/images/pexels.webp",
     favorite: false
   },
   {
@@ -54,7 +54,7 @@ export const FLOWERS: Flower[] = [
     name: "Cherry Blossom",
     latin_name: "Cherry Spinosa",
     sightings: 3,
-    profile_picture: "https://flowrspot-api.herokuapp.com/images/medium/missing.jpg",
+    profile_picture: "assets/images/pxels-photo-196664.jpeg",
     favorite: false
   },
   {
@@ -62,7 +62,7 @@ export const FLOWERS: Flower[] = [
     name: "crvena lala",
     latin_name: "lalaaaa",
     sightings: 0,
-    profile_picture: "//flowrspot.s3.amazonaws.com/flowers/profile_pictures/000/000/069/medium/LALA.jpg?1680706319",
+    profile_picture: "assets/images/jorgovan2.gif",
     favorite: false
   }
 ];

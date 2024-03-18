@@ -1,0 +1,14 @@
+
+<div class="user-details-container">
+    <div class="user-profile">
+      <img [src]="authService._user?.profilePictureUrl" alt="User Profile Picture">
+      <h2>{{authService._user?.firstName}} {{ authService._user?.lastName }}</h2>
+    </div>
+    <div class="user-info">
+      <p><strong>First Name:</strong> {{ authService._user?.firstName }}</p>
+      <p><strong>Last name:</strong> {{ authService._user?.lastName }}</p>
+      <p><strong>Date of Birth:</strong> {{ authService._user?.dateOfBirth }}</p>
+      <p><strong>Email Address:</strong> {{ authService._user?.email }}</p>
+    </div>
+    <button  (click)="logout()">Logout</button>
+  </div>

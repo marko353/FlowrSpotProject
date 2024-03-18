@@ -13,5 +13,6 @@ import { FormsModule } from '@angular/forms';
 export class FlowerGalleryItemComponent {
 
   @Input() flower!: Flower;
+totalPages: any;
 
 }

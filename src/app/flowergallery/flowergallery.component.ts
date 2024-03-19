@@ -14,6 +14,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './flowergallery.component.scss'
 })
 export class FlowergalleryComponent {
+  currentPage: number = 1;
+
+  changePage(pageNumber: number): void {
+    this.currentPage = pageNumber;
+  }
 
   public flowers$: Observable<Flower[]> = this._flowerService.getFlowers();
 

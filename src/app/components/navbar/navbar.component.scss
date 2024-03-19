@@ -1,3 +1,22 @@
+.avatar img {
+  width: 50px; /* Postavite širinu avatara na 50 piksela */
+  height: 50px; /* Postavite visinu avatara na 50 piksela */
+  border-radius: 50%; /* Postavite zaobljeni ivičnjak kako biste dobili oblik kruga */
+  margin-left: -10px; /* Dodajte razmak s leve strane */
+  cursor: pointer; /* Postavite pokazivač kursora na oblik ruke */
+}
+
+.avatar img:hover {
+  opacity: 0.8; /* Smanjite prozirnost slike kada je kursor iznad nje */
+}
+
+.user-name {
+  font-size: 18px; /* Postavite veličinu fonta */
+  font-weight: bold; /* Postavite debljinu fonta */
+  color: #333; /* Postavite boju teksta */
+  margin-right: 20px; /* Dodajte razmak s desne strane */
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -36,6 +55,7 @@ header {
 .sl-banner-navigation li {
   display: inline-block;
   margin-left: 60px;
+  margin-top: 35px;
 }
 
 .sl-banner-navigation a {
@@ -44,14 +64,16 @@ header {
   color: lightslategray;
 }
 
-.login a {
+.button-styling {
   color: coral;
 }
 
-.nav-bar li:last-child {
+.button-styling {
   border: 10px solid rgb(241, 131, 92);
   background-color: rgb(241, 131, 92);
   border-radius: 100px;
+  padding-inline: 10px;
+  cursor: pointer;
 
   a {
     color: white;

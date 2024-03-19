@@ -4,4 +4,15 @@
       <app-flower-gallery-item [flower]="item"></app-flower-gallery-item>
     </div>
   </div>
-</div>
+  <div style="text-align: center;">
+    <ul class="pagination">
+      <li style="display: inline-block; margin: 0 5px;"><a href="#" (click)="changePage(1)" [class.active]="currentPage === 1">1</a></li>
+      <li style="display: inline-block; margin: 0 5px;"><a href="#" (click)="changePage(2)" [class.active]="currentPage === 2">2</a></li>
+      <li style="display: inline-block; margin: 0 5px;"><a href="#" (click)="changePage(3)" [class.active]="currentPage === 3">3</a></li>
+      <li style="display: inline-block; margin: 0 5px;"><a href="#" (click)="changePage(4)" [class.active]="currentPage === 4">4</a></li>
+      <li style="display: inline-block; margin: 0 5px;"><a href="#">...</a></li>
+    </ul>
+  </div>
+  
+  
+

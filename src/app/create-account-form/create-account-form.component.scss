@@ -1,55 +1,76 @@
 /* Container za formu */
 .form-container {
-  max-width: 400px; /* Prilagodite veličinu prema svojim preferencijama */
-  margin: 50px auto 0; /* Centriramo formu na sredini ekrana i dodajemo marginu od 50px na vrhu */
-  padding: 20px; /* Dodajemo malo prostora oko forme */
+  max-width: 500px; /* Možete prilagoditi veličinu prema svojim preferencijama */
+  margin: 0 auto; /* Centrira formu na sredini ekrana */
+  padding: 20px; /* Dodaje malo prostora oko forme */
   background-color: #f9f9f9; /* Boja pozadine */
-  border: 1px solid #ccc; /* Dodajemo tanku ivicu oko forme */
-  border-radius: 8px;
+  border: 1px solid #ccc; /* Dodaje tanku ivicu oko forme */
+  border-radius: 8px; /* Zaobljeni uglovi */
   margin-top: 50px;
-}
 
-/* Stilizacija input polja, labela i dugmeta */
-.form-group {
-  margin-bottom: 20px;
-}
+  /* Stilizacija input polja, labela i dugmeta */
+  .form-group {
+    margin-bottom: 20px;
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-  outline: none;
-  border-color: dodgerblue;
-}
+      &:focus {
+        outline: none;
+        border-color: dodgerblue;
+      }
+    }
+  }
 
-button[type="submit"] {
-  width: 100%;
-  padding: 12px 20px;
-  background-color: coral;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: coral;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: coral;
+    color: white;
 
-button[type="submit"]:hover {
-  background-color: coral;
+    &[disabled]{
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  /* Stilizacija poslednjeg input polja i checkbox-a */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+
+    input[type="text"] {
+      width: calc(100% - 40px); /* Oduzimamo prostor za checkbox */
+      padding: 10px;
+      margin-right: 10px; /* Dodajemo razmak između input polja i checkbox-a */
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px; /* Dodatni razmak između checkbox-a i teksta */
+    }
+
+    /* Stilizacija teksta koji prati checkbox */
+    .checkbox-label {
+      font-size: 16px;
+    }
+  }
 }
 

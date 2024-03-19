@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UrlSerializer } from '@angular/router';
-import { Observable, delay, map, of } from 'rxjs';
+import { Observable, delay, map, of, tap } from 'rxjs';
 
 export interface User {
   username: string;
@@ -30,9 +30,14 @@ export class AuthService {
     return of(this._user).pipe(delay(1000));
   }
 
-  logout(): Observable<void> {
-    this._user = null;
-    return of(null).pipe(delay(1000), map(() => { }));
+  logout(): Observable<null> {
+    /// this._user = null;
+    return of(null).pipe(
+        delay(1000), 
+        tap((response) => { 
+        this._user = response;
+      })
+    );
   }
 
   isLoggedIn(): boolean {

@@ -7,6 +7,6 @@
   </div>
   <h4>{{ flower.name }}</h4>
   <p>{{ flower.latin_name }}</p>
-  <span class="sightings">{{ flower.sightings }} sightings</span>
+  <span class="sightings" (click)="viewFlowerDetails(flower.id)">{{ flower.sightings }} sightings</span>
 </article>
 

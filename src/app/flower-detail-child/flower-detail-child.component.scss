@@ -1,0 +1,99 @@
+.flower-gallery-item {
+    --highlight-color: #ecb9b0;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    font-family: inherit;
+    background-blend-mode: multiply;
+
+    .favorite {
+        position: absolute;
+        top: 85px; /* Promenjeno da bi se checkbox vratio iznad teksta */
+        right: 15px;
+
+        label {
+            color: lightgray;
+            background-color: white;
+            border-radius: 50%;
+            padding: 5px 8px;
+            cursor: pointer;
+            transition: all 400ms;
+
+            &:hover {
+                color: white;
+                background-color: var(--highlight-color);
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked + label {
+                color: white;
+                background-color: var(--highlight-color);
+            }
+        }
+    }
+
+    h4 {
+        margin-bottom: 0;
+        font-size: 40px;
+        font-weight: 400;
+        margin-top: 120px;
+        white-space: nowrap; /* Da bi se tekst zadržao u jednom redu */
+    }
+
+    h5 {
+        font-size: 14px;
+        font-style: italic;
+        opacity: 0.7;
+        margin: 10px 0; /* Smanjeno odstupanje između paragrafa */
+    }
+    .sightings {
+        text-align: center;
+        padding: 12px 16px; /* Povećano odstupanje gornje i donje strane */
+        border-radius: 15px;
+        font-size: 14px; /* Povećana veličina fonta */
+        color: white;
+        transition: all 400ms;
+        background: rgba(0, 0, 0, 0.5);
+        min-width: 70px;
+        margin-left: 10px; /* Pomeranje od h4 elementa */
+        margin-bottom: 10px; /* Dodajte odstupanje ispod span elementa */
+        
+        &:hover {
+            color: white;
+            background-color: var(--highlight-color);
+            cursor: pointer;
+        }
+    }
+    .description p {
+        font-size: 18px; 
+        line-height: 1.5; 
+        color: gray; 
+        margin-top: 70px;
+        width: 1000px;
+        overflow-wrap: break-word; /* Prekid reči na kraju kontejnera */
+        word-break: normal; /* Sprečava prekid reči na pola */
+    }
+    
+    
+    
+    .small-image-details {
+        width: 100%;
+        font-size: 18px;
+        color: gray;
+        margin-top: 10px;
+        position: absolute;
+        right: 350px;
+       
+    }
+    
+    
+   
+}

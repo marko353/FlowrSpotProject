@@ -41,7 +41,9 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return this._user !== null;
+    const ulogovan = this._user !== null;
+    console.log('Korisnik je ulogovan:', ulogovan);
+    return ulogovan;
   }
 
   constructor() { }

@@ -1,0 +1,81 @@
+.flower-detail {
+  display: flex;
+  justify-content: center;
+  position: relative; 
+}
+
+.big-image {
+  width: 100%; 
+  height: 10px; 
+}
+
+.big-image img {
+  width: 100%; 
+  height: 430px;
+  filter: blur(5px);
+  
+}
+
+.small-image {
+  position: absolute;
+  top: 60px;
+  left: 10px; 
+  z-index: 1;
+  padding-left: 30px;
+  border-radius: 15px;
+}
+
+.small-image img {
+  width: 350px; 
+  height: 430px;
+  border-radius: 5px;
+}
+
+.details-container {
+  position: absolute;
+  top: 150px;
+  right: 850px;
+  width: 250px; /* Prilagodite širinu po potrebi */
+  padding: 20px; /* Prilagodite odstupanja po potrebi */
+  color: aliceblue;
+ 
+}
+
+
+
+.add-sighting-button {
+  position: absolute; 
+  top: 300px;
+  right: 150px;
+  width: 250px; 
+  height: 60px;
+  border-radius: 5px;
+  background-color: rgba(241, 131, 92, 0.9); /* Adjust opacity if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s; /* Add transition for color change */
+}
+
+.add-sighting-button button {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.code-divider {
+  border: none;
+  border-top: 1px solid grey; /* Debljina i boja linije */;
+  width: 95%;
+  margin: 0 auto; /* Centrira liniju */
+  margin-top: 670px
+}
+
+
+
+
+
+

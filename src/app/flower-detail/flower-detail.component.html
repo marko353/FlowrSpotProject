@@ -1,0 +1,23 @@
+<div class="flower-detail">
+    <div class="big-image">
+        <!-- Velika slika -->
+        <div class="image-container">
+            <img src="assets\images\new1.jpg" alt="New Flower Image">
+            <div class="add-sighting-button" *ngIf="isLoggedIn" >
+                <!-- Dugme za dodavanje novog zapažanja -->
+                <button (click)="updateSmallImage()">+ Add New Sighting</button>
+            </div>
+        </div>
+        <div class="details-container">
+            <app-flower-detail-child [flower]="flower"></app-flower-detail-child>
+        </div>
+    </div>
+    <div class="small-image">
+        <!-- Manja slika -->
+        <img [src]="smallImageUrl" alt="Small Flower Image">
+    </div>
+</div>
+<hr class="code-divider">
+
+
+

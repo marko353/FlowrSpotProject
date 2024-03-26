@@ -4,12 +4,14 @@ import { CreateAccountFormComponent } from './create-account-form/create-account
 import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { FlowerDetailComponent } from './flower-detail/flower-detail.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch:'full' },
   { path: 'register', component: CreateAccountFormComponent },
   { path: 'login',component: LoginFormComponent},
-  { path: 'user-details', component: UserDetailsComponent }
+  { path: 'user-details', component: UserDetailsComponent },
+  { path: 'flower/:id', component: FlowerDetailComponent }
 ];
 
 @NgModule({

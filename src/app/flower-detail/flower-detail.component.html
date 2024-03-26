@@ -3,7 +3,7 @@
         <!-- Velika slika -->
         <div class="image-container">
             <img src="assets\images\new1.jpg" alt="New Flower Image">
-            <div class="add-sighting-button">
+            <div class="add-sighting-button" *ngIf="isLoggedIn" >
                 <!-- Dugme za dodavanje novog zapažanja -->
                 <button (click)="updateSmallImage()">+ Add New Sighting</button>
             </div>
@@ -18,8 +18,6 @@
     </div>
 </div>
 <hr class="code-divider">
-
-
 
 
 
